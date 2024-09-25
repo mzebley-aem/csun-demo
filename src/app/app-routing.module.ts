@@ -294,12 +294,12 @@ export const appRoutes: Route[] = [
   //   ],
   // },
   {
-    path: 'csun',
+    path: 'accessibility',
     component: KitchenSinkComponent,
-    data: { breadcrumbLabel: 'CSUN Demo' },
+    data: { breadcrumbLabel: 'Accessibility' },
     
   },
-  { path: '**',   redirectTo: '/csun', pathMatch: 'full' },
+  { path: '**',   redirectTo: '/accessibility', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RoutingModule} from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccordionComponent } from './pages/components/items/accordion/accordion.component';
@@ -52,8 +52,9 @@ import { SpacingComponent } from './pages/core/items/spacing/spacing.component';
 import { FocusComponent } from './pages/core/items/focus/focus.component';
 import { LinksComponent } from './pages/core/items/links/links.component';
 import { KitchenSinkComponent } from './pages/kitchen-sink/kitchen-sink.component';
-import { AccessibilityWidgetComponent } from './accessibility-widget/accessibility-widget.component';
 import { ModalComponent } from './pages/components/items/modal/modal.component';
+
+import { AemAccessibilityCenterModule } from 'aem-accessibility-center';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { ModalComponent } from './pages/components/items/modal/modal.component';
     BrowserModule,
     RoutingModule,
     ReactiveFormsModule,
-    AccessibilityWidgetComponent
+    FormsModule,
+    AemAccessibilityCenterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

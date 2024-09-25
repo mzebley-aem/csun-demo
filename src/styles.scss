@@ -49,6 +49,10 @@
   :root {
     --usa-header-max-width: var(--usa-spacing-widescreen);
     --usa-banner-max-width: var(--usa-spacing-widescreen);
+    --a11y-font-size-modifier: 1;
+    --a11y-line-height-modifier: 1;
+    --a11y-letter-spacing-modifier: 1;
+    --a11y-spacing-modifier: 1;
   }
 
   .site-preview-heading, .usa-preview-heading {

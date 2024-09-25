@@ -33,7 +33,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"],
+              "src/styles.scss",
+               "node_modules/aem-accessibility-center/src/lib/index.scss"
+            ],
               "scripts": [
                 "node_modules/@uswds/uswds/dist/js/uswds-init.min.js"
               ],

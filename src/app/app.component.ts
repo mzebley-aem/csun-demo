@@ -4,7 +4,7 @@ import * as USWDS from '@uswds/uswds/js';
 import { Subscription } from 'rxjs';
 import { aggregatedTokens } from './aggregated-tokens';
 import { TokenToCssService } from './services/token-to-css.service';
-import { AccessibilityWidgetService } from './accessibility-widget/accessibility-widget.service';
+import { AemAccessibilityCenterService } from 'aem-accessibility-center';
 const { banner, inPageNavigation, navigation, accordion } = USWDS;
 @Component({
   selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent {
   constructor(
     private themeService: ThemeService,
     private tokenToCssService: TokenToCssService,
-    private accessibilityWidgetService: AccessibilityWidgetService
+    private accessibilityWidgetService: AemAccessibilityCenterService
   ) {
     this.availableThemes = this.themeService.availableThemes;
     this.themeSubscription = this.themeService.getTheme().subscribe((theme) => {
@@ -70,16 +70,6 @@ export class AppComponent {
     inPageNavigation.on(document.body);
     navigation.on(document.body);
     accordion.on(document.body);
-    this.accessibilityWidgetService.showAccessibilityWidget$.subscribe(
-      (show) => {
-        this.a11yPanelOpen = show;
-      }
-    );
-  }
-
-  openA11yPanel() {
-    this.accessibilityWidgetService.toggleWidgetVisibility();
-    document.documentElement.setAttribute('data-a11y-panel', 'open');
   }
 
 }
